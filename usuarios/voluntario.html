@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Painel do voluntário EcoMulher">
+<title>EcoMulher - Voluntário</title>
+<style>
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f5e9dc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f5e9dc;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+}
+
+.site-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #DC143C;
+  margin-top: 10px;
+}
+
+.site-subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #DC143C;
+  margin-top: 5px;
+}
+
+/* Menu Voluntário */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #DC143C;
+  transition: transform 0.3s, color 0.3s;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  color: #a50f2d;
+  transform: translateY(-2px);
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #2E8B57;
+  margin-bottom: 15px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-top: 30px;
+  border-bottom: 2px solid #2E8B57;
+  padding-bottom: 5px;
+}
+
+section {
+  background-color: #fdf6f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+/* Tabelas e listas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #2E8B57;
+  color: white;
+}
+
+ul {
+  list-style: disc inside;
+  margin-top: 10px;
+}
+
+/* Botões */
+button {
+  padding: 6px 12px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button.action {
+  background-color: #2E8B57;
+  color: white;
+}
+
+button.action:hover {
+  background-color: #246b45;
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  table, th, td {
+    font-size: 0.9rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="../img/logo.png" alt="Logo EcoMulher" class="logo">
+  <div class="site-title">EcoMulher</div>
+  <div class="site-subtitle">Painel do Voluntário</div>
+  <nav>
+    <ul>
+      <li><a href="voluntario.html">Dashboard</a></li>
+      <li><a href="../index.html">Voltar ao site</a></li>
+      <li><a href="../usuarios/login.html">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Painel do Voluntário</h1>
+
+  <!-- Calendário de eventos -->
+  <section>
+    <h2>Próximos Eventos</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Evento</th>
+          <th>Local</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10/11/2025</td>
+          <td>Mutirão Verde</td>
+          <td>Parque Central</td>
+          <td><button class="action">Participar</button></td>
+        </tr>
+        <tr>
+          <td>20/11/2025</td>
+          <td>Oficina de Compostagem</td>
+          <td>Centro Comunitário</td>
+          <td><button class="action">Participar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Doações -->
+  <section>
+    <h2>Doações</h2>
+    <p>Você pode acompanhar suas doações ou contribuir para novos projetos:</p>
+    <ul>
+      <li>Doação de R$50,00 em 15/10/2025 - Projeto Verde</li>
+      <li>Doação de R$100,00 em 01/09/2025 - Projeto Água Limpa</li>
+    </ul>
+    <button class="action">Fazer nova doação</button>
+  </section>
+
+  <!-- Projetos -->
+  <section>
+    <h2>Projetos disponíveis</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Projeto</th>
+          <th>Descrição</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Projeto Verde</td>
+          <td>Capacitação de mulheres em sustentabilidade</td>
+          <td>Ativo</td>
+          <td><button class="action">Inscrever-se</button></td>
+        </tr>
+        <tr>
+          <td>Projeto Água Limpa</td>
+          <td>Limpeza de rios e conscientização ambiental</td>
+          <td>Ativo</td>
+          <td><button class="action">Inscrever-se</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Notícias / Atualizações -->
+  <section>
+    <h2>Notícias e Atualizações</h2>
+    <ul>
+      <li>EcoMulher lança campanha de reciclagem em novembro.</li>
+      <li>Nova oficina de compostagem será realizada no dia 20/11/2025.</li>
+      <li>Projeto Verde recebe reconhecimento pelo impacto ambiental.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 EcoMulher - Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

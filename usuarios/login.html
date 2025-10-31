@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Login de usuários EcoMulher">
+<title>EcoMulher - Login</title>
+<style>
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f5e9dc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f5e9dc;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+}
+
+.site-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #DC143C;
+  margin-top: 10px;
+}
+
+.site-subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #DC143C;
+  margin-top: 5px;
+}
+
+/* Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #DC143C;
+  transition: transform 0.3s, color 0.3s;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  animation: bounce 0.5s;
+  color: #a50f2d;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-10px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 400px;
+  margin: 60px auto;
+  background-color: #fdf6f0;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Título Login com mesma cor e estilo dos links do menu */
+h1.login-title {
+  color: #DC143C;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  transition: color 0.3s, transform 0.3s;
+  cursor: default;
+}
+
+h1.login-title:hover {
+  color: #a50f2d;
+  transform: translateY(-2px);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+  border-color: #2E8B57;
+  box-shadow: 0 0 5px rgba(46,139,87,0.3);
+  outline: none;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  width: 100%;
+  background-color: #2E8B57;
+  color: white;
+}
+
+button:hover {
+  background-color: #246b45;
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  main {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  h1.login-title {
+    font-size: 1.6rem;
+  }
+
+  input, button {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="../img/logo.png" alt="Logo EcoMulher" class="logo">
+  <div class="site-title">EcoMulher</div>
+  <div class="site-subtitle">Um movimento feminino por um mundo mais verde</div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="../projetos.html">Projetos</a></li>
+      <li><a href="../cadastro.html">Cadastro</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1 class="login-title">Login</h1>
+
+  <form id="loginForm">
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required aria-label="E-mail">
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required aria-label="Senha">
+
+    <button type="submit">Entrar</button>
+  </form>
+</main>
+
+<footer>
+  <p>© 2025 EcoMulher - Todos os direitos reservados.</p>
+</footer>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const email = document.getElementById('email').value.trim();
+  const senha = document.getElementById('senha').value.trim();
+
+  // Usuários cadastrados (simulado)
+  const usuarios = [
+    {email: 'admin@ecomulher', senha: 'ecomulher123', tipo: 'admin'},
+    {email: 'voluntario@ecomulher', senha: 'Voluntario123', tipo: 'voluntario'}
+  ];
+
+  const usuario = usuarios.find(u => u.email === email && u.senha === senha);
+
+  if(usuario) {
+    if(usuario.tipo === 'admin') {
+      alert('Login de administrador bem-sucedido!');
+      window.location.href = 'admin.html';
+    } else {
+      alert('Login de voluntário bem-sucedido!');
+      window.location.href = 'voluntario.html';
+    }
+  } else {
+    alert('E-mail ou senha incorretos!');
+  }
+});
+</script>
+
+</body>
+</html>
