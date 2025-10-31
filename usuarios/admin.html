@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Painel de administração EcoMulher">
+<title>EcoMulher - Administração</title>
+<style>
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f5e9dc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f5e9dc;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+}
+
+.site-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #DC143C;
+  margin-top: 10px;
+}
+
+.site-subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #DC143C;
+  margin-top: 5px;
+}
+
+/* Menu Admin */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #DC143C;
+  transition: transform 0.3s, color 0.3s;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  color: #a50f2d;
+  transform: translateY(-2px);
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #2E8B57;
+  margin-bottom: 15px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-top: 30px;
+  border-bottom: 2px solid #2E8B57;
+  padding-bottom: 5px;
+}
+
+section {
+  background-color: #fdf6f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+/* Tabelas de gerenciamento */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #2E8B57;
+  color: white;
+}
+
+/* Botões */
+button {
+  padding: 6px 12px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button.add {
+  background-color: #2E8B57;
+  color: white;
+}
+
+button.add:hover {
+  background-color: #246b45;
+  transform: scale(1.05);
+}
+
+button.edit {
+  background-color: #FFA500;
+  color: white;
+}
+
+button.edit:hover {
+  background-color: #e59400;
+  transform: scale(1.05);
+}
+
+button.delete {
+  background-color: #DC143C;
+  color: white;
+}
+
+button.delete:hover {
+  background-color: #a50f2d;
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  table, th, td {
+    font-size: 0.9rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="../img/logo.png" alt="Logo EcoMulher" class="logo">
+  <div class="site-title">EcoMulher</div>
+  <div class="site-subtitle">Painel de Administração</div>
+  <nav>
+    <ul>
+      <li><a href="admin.html">Dashboard</a></li>
+      <li><a href="../index.html">Voltar ao site</a></li>
+      <li><a href="../usuarios/login.html">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Painel Administrativo</h1>
+
+  <!-- Gerenciamento de Logins -->
+  <section>
+    <h2>Gerenciar Usuários</h2>
+    <button class="add">Adicionar Usuário</button>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Função</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Maria Silva</td>
+          <td>maria@email.com</td>
+          <td>Voluntária</td>
+          <td>
+            <button class="edit">Editar</button>
+            <button class="delete">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Gerenciamento de Doações -->
+  <section>
+    <h2>Gerenciar Doações</h2>
+    <button class="add">Adicionar Doação</button>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Doador</th>
+          <th>Valor</th>
+          <th>Data</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>João Pereira</td>
+          <td>R$ 200,00</td>
+          <td>30/10/2025</td>
+          <td>
+            <button class="edit">Editar</button>
+            <button class="delete">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Gerenciamento de Voluntariado -->
+  <section>
+    <h2>Gerenciar Formulários de Voluntariado</h2>
+    <button class="add">Adicionar Voluntário</button>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Projeto</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Ana Costa</td>
+          <td>ana@email.com</td>
+          <td>Projeto Verde</td>
+          <td>
+            <button class="edit">Editar</button>
+            <button class="delete">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Gerenciamento de Projetos -->
+  <section>
+    <h2>Gerenciar Projetos</h2>
+    <button class="add">Adicionar Projeto</button>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome do Projeto</th>
+          <th>Descrição</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Projeto Verde</td>
+          <td>Capacitação de mulheres em sustentabilidade</td>
+          <td>Ativo</td>
+          <td>
+            <button class="edit">Editar</button>
+            <button class="delete">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 EcoMulher - Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
