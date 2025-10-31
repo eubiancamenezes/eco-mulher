@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cadastro de voluntárias EcoMulher - Um movimento feminino por um mundo mais verde">
+<title>EcoMulher - Cadastro</title>
+<style>
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f5e9dc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f5e9dc;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+}
+
+.site-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #DC143C;
+  margin-top: 10px;
+}
+
+.site-subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #DC143C;
+  margin-top: 5px;
+}
+
+/* Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #DC143C;
+  transition: transform 0.3s, color 0.3s;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  animation: bounce 0.5s;
+  color: #a50f2d;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-10px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+/* Banner */
+#banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  background-color: #82BA8E;
+}
+
+#banner img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: #fdf6f0;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+h1 {
+  text-align: center;
+  color: #2E8B57;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+h2 {
+  color: #2E8B57;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+fieldset {
+  border: 2px solid #82BA8E;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+legend {
+  font-weight: bold;
+  color: #2E8B57;
+  font-size: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #2E8B57;
+  box-shadow: 0 0 5px rgba(46,139,87,0.3);
+  outline: none;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button[type="submit"] {
+  background-color: #2E8B57;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #246b45;
+  transform: scale(1.05);
+}
+
+button[type="reset"] {
+  background-color: #DC143C;
+  color: white;
+  margin-left: 10px;
+}
+
+button[type="reset"]:hover {
+  background-color: #a50f2d;
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .site-title {
+    font-size: 2rem;
+  }
+
+  .site-subtitle {
+    font-size: 1rem;
+  }
+
+  main {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  fieldset {
+    padding: 20px;
+  }
+
+  button {
+    width: 48%;
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+
+  div[style*="text-align: center;"] {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 15px 10px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  input, select, button {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  button {
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+
+  div[style*="text-align: center;"] {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #banner img {
+    max-width: 95%;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="img/logo.png" alt="Logo EcoMulher" class="logo">
+  <div class="site-title">EcoMulher</div>
+  <div class="site-subtitle">Um movimento feminino por um mundo mais verde</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="cadastro.html">Cadastro</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Banner -->
+<section id="banner" aria-label="Banner com mulheres participando de projetos de sustentabilidade da EcoMulher">
+  <img src="img/banner.jpg" alt="Mulheres participando de projetos de sustentabilidade da EcoMulher">
+</section>
+
+<main>
+  <h1>Cadastro de Voluntária</h1>
+
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Preencha seus dados</legend>
+      <h2>Informações Pessoais</h2>
+
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" required aria-label="Nome completo">
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required aria-label="Endereço de e-mail">
+
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14" required aria-label="CPF">
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required aria-label="Telefone">
+
+      <label for="nascimento">Data de Nascimento:</label>
+      <input type="date" id="nascimento" name="nascimento" required aria-label="Data de nascimento">
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco" required aria-label="Endereço completo">
+
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9" required aria-label="CEP">
+
+      <label for="cidade">Cidade:</label>
+      <input type="text" id="cidade" name="cidade" required aria-label="Cidade">
+
+      <label for="estado">Estado:</label>
+      <select id="estado" name="estado" required aria-label="Estado">
+        <option value="">Selecione...</option>
+        <option>SP</option>
+        <option>RJ</option>
+        <option>MG</option>
+        <option>BA</option>
+        <option>PE</option>
+        <option>RS</option>
+        <option>SC</option>
+      </select>
+
+      <div style="text-align: center;">
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+      </div>
+    </fieldset>
+  </form>
+</main>
+
+<footer>
+  <p>© 2025 EcoMulher - Todos os direitos reservados.</p>
+</footer>
+
+<script>
+// Máscara de CPF
+const cpfInput = document.getElementById('cpf');
+cpfInput.addEventListener('input', function (e) {
+  let value = e.target.value.replace(/\D/g, '');
+  if (value.length > 11) value = value.slice(0, 11);
+  value = value.replace(/(\d{3})(\d)/, '$1.$2');
+  value = value.replace(/(\d{3})(\d)/, '$1.$2');
+  value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+  e.target.value = value;
+});
+
+// Máscara de telefone
+const telefoneInput = document.getElementById('telefone');
+telefoneInput.addEventListener('input', function (e) {
+  let value = e.target.value.replace(/\D/g, '');
+  if (value.length > 11) value = value.slice(0, 11);
+  value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+  value = value.replace(/(\d{5})(\d{1,4})$/, '$1-$2');
+  e.target.value = value;
+});
+
+// Máscara de CEP
+const cepInput = document.getElementById('cep');
+cepInput.addEventListener('input', function (e) {
+  let value = e.target.value.replace(/\D/g, '');
+  if (value.length > 8) value = value.slice(0, 8);
+  value = value.replace(/(\d{5})(\d)/, '$1-$2');
+  e.target.value = value;
+});
+</script>
+
+</body>
+</html>

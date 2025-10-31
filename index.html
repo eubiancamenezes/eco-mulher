@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoMulher - ONG dedicada à sustentabilidade e capacitação feminina em projetos sociais e ambientais">
+  <title>EcoMulher - Início</title>
+  <style>
+    /* Reset e base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f5e9dc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: #f5e9dc;
+      padding-bottom: 10px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .logo-container {
+      text-align: left;
+    }
+
+    .logo {
+      display: block;
+      width: 150px;
+    }
+
+    .site-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #DC143C;
+      margin-top: 5px;
+    }
+
+    .site-subtitle {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #DC143C;
+      margin-top: 2px;
+    }
+
+    .login-btn {
+      background-color: #2E8B57;
+      color: white;
+      padding: 10px 18px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .login-btn:hover {
+      background-color: #246b45;
+      transform: scale(1.05);
+    }
+
+    /* Menu */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: #DC143C;
+      transition: transform 0.3s, color 0.3s;
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      animation: bounce 0.5s;
+      color: #a50f2d;
+    }
+
+    @keyframes bounce {
+      0%   { transform: translateY(0); }
+      25%  { transform: translateY(-10px); }
+      50%  { transform: translateY(0); }
+      75%  { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Banner */
+    #banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 0;
+      background-color: #82BA8E;
+    }
+
+    #banner img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Conteúdo principal */
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: #fdf6f0;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    h1, h2 {
+      color: #2E8B57;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    address {
+      font-style: normal;
+      line-height: 1.5;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 30px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      #banner img {
+        max-width: 95%;
+      }
+
+      .site-title {
+        font-size: 2rem;
+      }
+
+      .site-subtitle {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="header-top">
+      <div class="logo-container">
+        <img src="img/logo.png" alt="Logo da ONG EcoMulher" class="logo">
+        <div class="site-title">EcoMulher</div>
+        <div class="site-subtitle">Um movimento feminino por um mundo mais verde</div>
+      </div>
+      <div class="login-container">
+        <a href="usuarios/login.html" class="login-btn">Login</a>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section id="banner" aria-label="Banner com mulheres participando de projetos de sustentabilidade da EcoMulher">
+    <img src="img/banner.jpg" alt="Mulheres participando de projetos de sustentabilidade da EcoMulher">
+  </section>
+
+  <main>
+    <!-- Sobre a ONG -->
+    <section id="sobre">
+      <h1>EcoMulher</h1>
+      <p>A EcoMulher é uma ONG dedicada à sustentabilidade e capacitação de mulheres em diversas áreas, incluindo educação ambiental, empreendedorismo e projetos sociais. Nosso objetivo é empoderar mulheres e fomentar ações que promovam um mundo mais verde e consciente.</p>
+    </section>
+
+    <!-- Missão -->
+    <section id="missao">
+      <h2>Missão</h2>
+      <p>Capacitar mulheres para desenvolverem negócios sustentáveis, projetos ecológicos e ações sociais que beneficiem suas comunidades. Buscamos conscientizar sobre o impacto ambiental e fomentar o protagonismo feminino em todas as áreas.</p>
+    </section>
+
+    <!-- Visão -->
+    <section id="visao">
+      <h2>Visão</h2>
+      <p>Ser referência nacional em iniciativas femininas de sustentabilidade, promovendo um futuro mais verde, inclusivo e ético.</p>
+    </section>
+
+    <!-- Valores -->
+    <section id="valores">
+      <h2>Valores</h2>
+      <ul>
+        <li>Empoderamento feminino</li>
+        <li>Sustentabilidade e respeito ao meio ambiente</li>
+        <li>Inclusão social e diversidade</li>
+        <li>Transparência e ética</li>
+      </ul>
+    </section>
+
+    <!-- Histórico -->
+    <section id="historico">
+      <h2>Histórico</h2>
+      <p>Desde 2018, a EcoMulher promove ações de capacitação e sustentabilidade, alcançando comunidades em todo o Brasil e apoiando mais de 2.000 mulheres em projetos ecológicos e sociais.</p>
+    </section>
+
+    <!-- Conquistas -->
+    <section id="conquistas">
+      <h2>Conquistas</h2>
+      <ul>
+        <li>Mais de 50 projetos ambientais concluídos;</li>
+        <li>Parcerias com escolas e empresas sustentáveis;</li>
+        <li>Reconhecimento nacional pelo Prêmio Verde Mulher 2024.</li>
+      </ul>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <address>
+        Email: <a href="mailto:contato@ecomulher.org.br">contato@ecomulher.org.br</a><br>
+        Telefone: (11) 99999-9999<br>
+        Endereço: Rua Exemplo, 123 - São Paulo, SP
+      </address>
+      <p>Siga-nos:</p>
+      <ul>
+        <li><a href="#" target="_blank">Instagram</a></li>
+        <li><a href="#" target="_blank">Facebook</a></li>
+        <li><a href="#" target="_blank">LinkedIn</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 EcoMulher - Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

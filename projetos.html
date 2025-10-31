@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoMulher - Projetos</title>
+<style>
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f5e9dc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f5e9dc;
+}
+
+.logo {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.site-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #DC143C;
+  margin-top: 10px;
+}
+
+.site-subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #DC143C;
+  margin-top: 5px;
+}
+
+/* Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #DC143C;
+  transition: transform 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #a50f2d;
+  transform: scale(1.05);
+}
+
+/* Main */
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Seções */
+section {
+  margin-bottom: 40px;
+  padding: 25px;
+  background-color: #fdf6f0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+h1, h2 {
+  color: #2E8B57;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+/* Projetos */
+article {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+article figure {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+article img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 10px;
+  transition: transform 0.4s;
+}
+
+article img:hover {
+  transform: scale(1.05);
+}
+
+article figcaption {
+  font-weight: bold;
+  color: #2E8B57;
+  margin-top: 8px;
+}
+
+article p {
+  flex: 2;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Botão cadastro */
+.btn-cadastro {
+  display: inline-block;
+  background-color: #2E8B57;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-cadastro:hover {
+  background-color: #246b45;
+  transform: scale(1.05);
+}
+
+/* Voluntariado */
+#voluntariado p {
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 15px auto;
+}
+
+#voluntariado {
+  text-align: center;
+}
+
+/* Doações */
+#doacoes ul {
+  list-style: disc;
+  padding-left: 30px;
+  margin-top: 15px;
+}
+
+#doacoes p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  article {
+    flex-direction: column;
+  }
+
+  article p {
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-title {
+    font-size: 2rem;
+  }
+
+  .site-subtitle {
+    font-size: 1rem;
+  }
+
+  article img {
+    max-width: 90%;
+  }
+
+  article p {
+    font-size: 1rem;
+  }
+
+  .btn-cadastro {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 1.1rem;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  main {
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="img/logo.png" alt="Logo da ONG EcoMulher" class="logo">
+  <div class="site-title">EcoMulher</div>
+  <div class="site-subtitle">Um movimento feminino por um mundo mais verde</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="cadastro.html">Cadastro</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="projetos">
+    <h1>Projetos EcoMulher</h1>
+
+    <article>
+      <h2>Oficinas de Reciclagem</h2>
+      <figure>
+        <img src="img/reciclar.jpg" alt="Oficina de reciclagem da EcoMulher">
+        <figcaption>Oficinas de Reciclagem</figcaption>
+      </figure>
+      <p>As oficinas de reciclagem da EcoMulher transformam resíduos em arte, utilidade e renda, ensinando técnicas criativas de reaproveitamento de materiais e estimulando o consumo consciente.</p>
+    </article>
+
+    <article>
+      <h2>Hortas Comunitárias</h2>
+      <figure>
+        <img src="img/horta.jpg" alt="Projeto de horta comunitária">
+        <figcaption>Hortas Comunitárias</figcaption>
+      </figure>
+      <p>Os projetos de hortas comunitárias promovem o cultivo coletivo e sustentável de alimentos orgânicos, fortalecendo o vínculo entre as mulheres e a natureza.</p>
+    </article>
+
+    <article>
+      <h2>Mutirões Ambientais</h2>
+      <figure>
+        <img src="img/banner.jpg" alt="Mutirão ambiental da EcoMulher">
+        <figcaption>Mutirões Ambientais</figcaption>
+      </figure>
+      <p>Os mutirões ambientais reúnem voluntárias em ações de plantio, limpeza e conscientização ecológica. São momentos de união, aprendizado e cuidado com o planeta.</p>
+    </article>
+  </section>
+
+  <section id="voluntariado">
+    <h2>Seja voluntária</h2>
+    <p>Quer fazer parte dessa mudança? Junte-se a centenas de mulheres que estão transformando o mundo com atitudes verdes e solidárias.</p>
+    <a href="cadastro.html" class="btn-cadastro">Cadastre-se aqui</a>
+  </section>
+
+  <section id="doacoes">
+    <h2>Como Doar</h2>
+    <p>A EcoMulher acredita que toda contribuição faz diferença. Suas doações ajudam a manter nossas oficinas, hortas comunitárias e ações ambientais.</p>
+
+    <ul>
+      <li><strong>Doação via Pix:</strong> pix@ecomulher.org.br</li>
+      <li><strong>Transferência Bancária:</strong> Banco Verde – Agência 1234 – Conta Corrente 56789-0 – CNPJ: 00.000.000/0001-00</li>
+      <li><strong>Campanhas Online:</strong> participe de nossas campanhas de arrecadação e compartilhe em suas redes sociais.</li>
+    </ul>
+
+    <p style="margin-top: 20px;">Cada gesto de solidariedade ajuda a empoderar mulheres e a construir um planeta mais sustentável. 💚</p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 EcoMulher - Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
